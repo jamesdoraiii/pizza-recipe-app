@@ -1,3 +1,13 @@
-.blurOnHover:hover {
-  filter: blur(1px);
+.overlay {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hover-trigger .hover-target {
+  display: none;
+}
+
+.hover-trigger:hover .hover-target {
+  display: block;
 }
