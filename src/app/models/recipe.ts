@@ -6,4 +6,5 @@ export class Recipe {
   title: string;
   avgRating: number;
   numberOfReviews: number;
+  category: string;
 }

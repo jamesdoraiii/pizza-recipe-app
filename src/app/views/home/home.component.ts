@@ -8,11 +8,12 @@ import { Recipe } from '@models/recipe';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  recipes: [Recipe];
+  recipes: Recipe[];
 
   constructor(private data: DataService) {}
 
   ngOnInit(): void {
+    console.log(this.data.getAllRecipes());
     this.recipes = this.data.getAllRecipes();
   }
 }
