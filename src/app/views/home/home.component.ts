@@ -14,6 +14,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.data.getAllRecipes());
-    this.recipes = this.data.getAllRecipes();
+    this.recipes = this.data.getMostPopular();
   }
 }

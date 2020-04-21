@@ -54,7 +54,7 @@ export class DataService {
       prepTime: '20 min',
       activeTime: '20 min',
       title: 'Chicago Recipe 2',
-      avgRating: 5,
+      avgRating: 4,
       numberOfReviews: 120,
       category: 'chicago',
     },
@@ -64,7 +64,7 @@ export class DataService {
       prepTime: '20 min',
       activeTime: '20 min',
       title: 'Chicago Recipe 3',
-      avgRating: 5,
+      avgRating: 4,
       numberOfReviews: 120,
       category: 'chicago',
     },
@@ -84,7 +84,7 @@ export class DataService {
       prepTime: '20 min',
       activeTime: '20 min',
       title: 'Chicago Recipe 5',
-      avgRating: 8,
+      avgRating: 4,
       numberOfReviews: 120,
       category: 'chicago',
     },
@@ -222,5 +222,13 @@ export class DataService {
 
   getAllRecipes(): Recipe[] {
     return this.recipes;
+  }
+
+  getMostPopular(): Recipe[] {
+    return this.recipes.filter((recipe) => recipe.avgRating > 4);
+  }
+
+  getRecipesByCategory(category: string): Recipe[] {
+    return this.recipes.filter((recipe) => recipe.category === category);
   }
 }
