@@ -1,4 +1,4 @@
-<header class="bg-gray-900 text-gray-300 shadow-md">
+<header class="bg-gray-900 text-gray-300 shadow-md md:flex md:justify-between">
   <div class="py-3 px-4 flex justify-between items-center">
     <div>
       <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide">
@@ -6,29 +6,37 @@
         Make A Slice
       </h1>
     </div>
-    <div>
+    <div class="md:hidden">
       <button
         class="text-gray-300 focus:text-white hover:text-white focus:outline-none"
+        *ngIf="!open"
+        (click)="open = true"
       >
         <i class="fas fa-bars fa-2x"></i>
       </button>
+      <button
+        class="text-gray-300 focus:text-white hover:text-white focus:outline-none"
+        *ngIf="open"
+      >
+        <i class="fas fa-times fa-2x" (click)="open = false"></i>
+      </button>
     </div>
   </div>
-  <div class="text-lg px-2 py-2">
+  <div class="text-lg px-2 py-2 md:flex" [ngClass]="!open ? 'hidden' : ''">
     <button
-      class="text-white font-semibold mb-2 hover:bg-gray-800 w-full text-left rounded-md px-2"
+      class="focus:outline-none focus:shadow-outline font-semibold text-white mb-1 hover:bg-gray-800 active:bg-black w-full text-left rounded-md px-2 py-3 md:py-1 md:px-4"
     >
       Home
     </button>
     <br />
     <button
-      class="text-white font-semibold mb-2 hover:bg-gray-800 w-full text-left rounded-md px-2"
+      class="focus:outline-none focus:shadow-outline font-semibold text-white mb-1 hover:bg-gray-800 active:bg-black w-full text-left rounded-md px-2 py-3 md:py-1 md:px-4"
     >
       Search
     </button>
     <br />
     <button
-      class="text-white font-semibold mb-2 hover:bg-gray-800 w-full text-left rounded-md px-2"
+      class="focus:outline-none focus:shadow-outline font-semibold text-white mb-1 hover:bg-gray-800 active:bg-black w-full text-left rounded-md px-2 py-3 md:py-1 md:px-4"
     >
       Bookmarks
     </button>
