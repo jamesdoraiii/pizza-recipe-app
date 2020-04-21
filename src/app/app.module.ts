@@ -9,6 +9,7 @@ import { RecipeDetailComponent } from './views/recipe-detail/recipe-detail.compo
 import { RecipeCardComponent } from './components/recipe-card/recipe-card.component';
 import { RecipeListItemComponent } from './components/recipe-list-item/recipe-list-item.component';
 import { NavbarComponent } from './components/shell/navbar/navbar.component';
+import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './components/shell/navbar/navbar.component';
     RecipeDetailComponent,
     RecipeCardComponent,
     RecipeListItemComponent,
-    NavbarComponent
+    NavbarComponent,
+    JumbotronComponent
   ],
   imports: [
     BrowserModule,
