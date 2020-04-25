@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RecipeCardRowComponent } from './recipe-card-row.component';
+import { RecipesRowComponent } from './recipes-row.component';
 
-describe('RecipeCardRowComponent', () => {
-  let component: RecipeCardRowComponent;
-  let fixture: ComponentFixture<RecipeCardRowComponent>;
+describe('RecipesRowComponent', () => {
+  let component: RecipesRowComponent;
+  let fixture: ComponentFixture<RecipesRowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecipeCardRowComponent ]
+      declarations: [ RecipesRowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RecipeCardRowComponent);
+    fixture = TestBed.createComponent(RecipesRowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

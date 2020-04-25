@@ -1,6 +1,21 @@
 <div>
   <app-jumbotron></app-jumbotron>
-  <ng-container *ngFor="let recipe of recipes">
-    <app-recipe-card [recipe]="recipe"></app-recipe-card>
-  </ng-container>
+  <div class="">
+    <app-recipes-row
+      [recipes]="mostPopularRecipes"
+      [title]="'Most Popular'"
+    ></app-recipes-row>
+    <app-recipes-row
+      [recipes]="chicagoRecipes"
+      [title]="'Chicago Style'"
+    ></app-recipes-row>
+    <app-recipes-row
+      [recipes]="newYorkRecipes"
+      [title]="'Neopolitan Style'"
+    ></app-recipes-row>
+    <app-recipes-row
+      [recipes]="sicilianRecipes"
+      [title]="'Sicillian Style'"
+    ></app-recipes-row>
+  </div>
 </div>
